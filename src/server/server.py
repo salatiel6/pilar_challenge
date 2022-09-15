@@ -7,9 +7,9 @@ class Server:
         self.app = Flask(__name__)
         self.api = Api(
             self.app,
-            delfault="Endpoints",
-            default_label="Endpoints from API",
-            version="v0.1.2",
+            default="Endpoints",
+            default_label="from API",
+            version="v0.2.0",
             title="Pilar Challenge API",
             doc="/docs"
         )

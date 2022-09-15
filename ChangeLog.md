@@ -1,3 +1,9 @@
+> ![](https://img.shields.io/badge/Set_15,_2022-black) ![](https://img.shields.io/badge/v0.2.0-FEAT-blue)  
+> `Done all validation on entering data with validators and test cases`
+
+> ![](https://img.shields.io/badge/Set_15,_2022-black) ![](https://img.shields.io/badge/v0.1.3-FIX-green)  
+> `Fixed endpoints group design on swagger`
+
 > ![](https://img.shields.io/badge/Set_15,_2022-black) ![](https://img.shields.io/badge/v0.1.2-FIX-green)  
 > `Changed main file to one available in PythonAnywhere`
 
