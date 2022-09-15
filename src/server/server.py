@@ -9,7 +9,7 @@ class Server:
             self.app,
             delfault="Endpoints",
             default_label="Endpoints from API",
-            version="v0.1.0",
+            version="v0.1.1",
             title="Pilar Challenge API",
             doc="/docs"
         )
@@ -19,7 +19,7 @@ class Server:
         app.run(
             debug=True,
             host="0.0.0.0",
-            port=5000
+            port=8080
         )
 
 
