@@ -4,7 +4,7 @@ import sys
 sys.path.insert(1, "../")
 
 from controllers import app
-from exceptions import BodyKeysError, WordsListError, KeysValuesTypesError,\
+from controllers.exceptions import BodyKeysError, WordsListError, KeysValuesTypesError,\
     OrderValueError
 
 
