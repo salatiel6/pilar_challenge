@@ -1,3 +1,5 @@
+import re
+
 from .interface_process_handler import IntefaceHandler
 
 
@@ -13,4 +15,11 @@ class VowelCountHandler(IntefaceHandler):
         return False
 
     def handle(self) -> {}:
-        return {"message": "vowel count"}
+        result = {}
+
+        words = self.request_data["words"]
+        for word in words:
+            vowels = len(re.findall("[aeiouAEIOU]", word))
+            result[word] = vowels
+
+        return result

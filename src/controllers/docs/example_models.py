@@ -6,7 +6,7 @@ vowel_count_model = server.api.model(
         "words": fields.List(
             fields.String(),
             required=True,
-            default=["batman", "robin"]
+            default=["batman", "robin", "joker"]
         )
     }
 )
@@ -16,7 +16,7 @@ sort_model = server.api.model(
         "words": fields.List(
             fields.String(),
             required=True,
-            default=["batman", "robin"]
+            default=["batman", "robin", "joker"]
         ),
         "order": fields.String(required=True, default="asc")
     }

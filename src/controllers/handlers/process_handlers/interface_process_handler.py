@@ -7,5 +7,5 @@ class IntefaceHandler(ABC):
         pass
 
     @abstractmethod
-    def handle(self) -> {}:
+    def handle(self):
         pass
