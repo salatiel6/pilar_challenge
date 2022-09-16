@@ -12,5 +12,8 @@ class SortDescHandler(IntefaceHandler):
 
         return False
 
-    def handle(self) -> {}:
-        return {"message": "order desc"}
+    def handle(self) -> []:
+        words = self.request_data["words"]
+        result = sorted(words)[::-1]
+
+        return result
