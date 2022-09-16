@@ -2,9 +2,11 @@ from server import server
 from flask_restx import Resource
 from flask import request
 from git import Repo
-from .docs import vowel_count_model, sort_model, default_error_model
+
 from .handlers import ErrorHandlers, ProcessHandler
 from .validators import ValidateVowelCount, ValidateSort
+from .docs import vowel_count_input_model, sort_input_model, \
+    vowel_count_output_model, sort_output_model, default_error_model
 
 app, api = server.app, server.api
 app.config["REST_MASK_SWAGGER"] = False
@@ -15,9 +17,10 @@ error_handlers = ErrorHandlers
     "description": "Receives a list of words and counts the vowels of each one"
 })
 @api.param("payload", "List of words", _in="body")
-@api.expect(vowel_count_model)
+@api.expect(vowel_count_input_model)
 class VowelCount(Resource):
     @staticmethod
+    @api.response(200, "SUCCESS", vowel_count_output_model)
     @api.response(400, "BAD REQUEST", default_error_model)
     def post():
         request_data = request.json
@@ -38,9 +41,11 @@ class VowelCount(Resource):
 })
 @api.param("payload", "List of words and order option (asc or desc)",
            _in="body")
-@api.expect(sort_model)
+@api.expect(sort_input_model)
 class Sort(Resource):
     @staticmethod
+    @api.response(200, "SUCCESS", sort_output_model)
+    @api.response(400, "BAD REQUEST", default_error_model)
     def post():
         request_data = request.json
         route = request.path
@@ -51,7 +56,7 @@ class Sort(Resource):
         process_handler = ProcessHandler(request_data, route)
         sort_result = process_handler.process()
 
-        return sort_result
+        return {"result": sort_result}
 
 
 @app.route("/deploy", methods=["POST"])

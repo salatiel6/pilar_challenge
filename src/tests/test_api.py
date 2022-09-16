@@ -348,11 +348,13 @@ def test_sort_asc_with_valid_input(client):
     response_body = json.loads(result.data)
 
     assert result.status_code == 200
-    assert response_body == [
-      "batman",
-      "joker",
-      "robin"
-    ]
+    assert response_body == {
+        "result": [
+            "batman",
+            "joker",
+            "robin"
+        ]
+    }
 
 
 def test_sort_desc_with_valid_input(client):
@@ -378,8 +380,10 @@ def test_sort_desc_with_valid_input(client):
     response_body = json.loads(result.data)
 
     assert result.status_code == 200
-    assert response_body == [
-      "robin",
-      "joker",
-      "batman"
-    ]
+    assert response_body == {
+        "result": [
+            "robin",
+            "joker",
+            "batman"
+        ]
+    }

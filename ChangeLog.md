@@ -1,3 +1,9 @@
+> ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.7.2-FIX-green)  
+> `Fixed two tests that weren't passing`
+
+> ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.7.1-REFACTOR-red)  
+> `Refactored models display on swagger`
+
 > ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.7.0-FEAT-blue)  
 > `Implemented docker to run application`
 
