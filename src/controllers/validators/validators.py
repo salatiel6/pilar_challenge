@@ -1,5 +1,5 @@
-from controllers.exceptions import BodyKeysError, WordsListError, KeysValuesTypesError,\
-    OrderValueError
+from controllers.exceptions import BodyKeysError, WordsListError, \
+    KeysValuesTypesError, OrderValueError
 
 
 class Validators:

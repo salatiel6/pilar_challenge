@@ -22,11 +22,11 @@ class ErrorHandlers:
     @staticmethod
     @api.errorhandler(KeysValuesTypesError)
     @api.marshal_with(default_error_model, code=400)
-    def handle_words_list_error_exception(error):
+    def handle_keys_values_types_error_exception(error):
         return {'message': error.message}, 400
 
     @staticmethod
     @api.errorhandler(OrderValueError)
     @api.marshal_with(default_error_model, code=400)
-    def handle_words_list_error_exception(error):
+    def handle_order_value_error_exception(error):
         return {'message': error.message}, 400
