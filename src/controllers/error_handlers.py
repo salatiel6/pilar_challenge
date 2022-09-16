@@ -1,6 +1,6 @@
 from server import server
-from docs import default_error_model
-from exceptions import BodyKeysError, WordsListError, KeysValuesTypesError,\
+from .docs import default_error_model
+from .exceptions import BodyKeysError, WordsListError, KeysValuesTypesError,\
     OrderValueError
 
 api = server.api

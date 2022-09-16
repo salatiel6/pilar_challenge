@@ -1,9 +1,9 @@
 from server import server
 from flask_restx import Resource
 from flask import request
-from docs import vowel_count_model, sort_model, default_error_model
+from .docs import vowel_count_model, sort_model, default_error_model
 from .error_handlers import ErrorHandlers
-from .validators import Validators
+from .validators import ValidateVowelCount, ValidateSort
 
 app, api = server.app, server.api
 app.config["REST_MASK_SWAGGER"] = False
@@ -22,11 +22,8 @@ class VowelCount(Resource):
         request_data = request.json
         route = request.path
 
-        validators = Validators(request_data)
-
-        validators.validate_body_keys(route)
-        validators.validate_key_values_types(route)
-        validators.validate_words_list()
+        validator = ValidateVowelCount(request_data, route)
+        validator.validate()
 
         return "passed"
 
@@ -44,11 +41,7 @@ class Sort(Resource):
         request_data = request.json
         route = request.path
 
-        validators = Validators(request_data)
-
-        validators.validate_body_keys(route)
-        validators.validate_key_values_types(route)
-        validators.validate_words_list()
-        validators.validate_order_value()
+        validate = ValidateSort(request_data, route)
+        validate.validate()
 
         return "passed"
