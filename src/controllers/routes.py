@@ -57,7 +57,7 @@ class Sort(Resource):
 @app.route("/deploy", methods=["POST"])
 def deploy():
     if request.method == 'POST':
-        repo = Repo('path/to/git_repo')
+        repo = Repo('../')
 
         origin = repo.remotes.origin
         origin.pull()
