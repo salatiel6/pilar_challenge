@@ -9,7 +9,7 @@ class Server:
             self.app,
             default="Endpoints",
             default_label="from API",
-            version="v0.6.1",
+            version="v0.6.2",
             title="Pilar Challenge API",
             doc="/docs"
         )

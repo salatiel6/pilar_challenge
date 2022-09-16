@@ -57,7 +57,7 @@ class Sort(Resource):
 @app.route("/deploy", methods=["POST"])
 def deploy():
     if request.method == 'POST':
-        repo = Repo('../')
+        repo = Repo('./pilar_challenge')
 
         origin = repo.remotes.origin
         origin.pull()

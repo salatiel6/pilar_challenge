@@ -1,3 +1,6 @@
+> ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.6.2-FIX-green)  
+> `Fixed another git repository path for PythonAnywhere`
+
 > ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.6.1-FIX-green)  
 > `Fixed git repository path for PythonAnywhere`
 
