@@ -1,3 +1,6 @@
+> ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.4.1-FIX-green)  
+> `Fixed syntax errors caught by lint`
+
 > ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.4.0-FEAT-blue)  
 > `Handlers are now handling the requests`
 
