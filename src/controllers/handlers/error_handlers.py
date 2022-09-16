@@ -1,7 +1,7 @@
 from server import server
-from .docs import default_error_model
-from .exceptions import BodyKeysError, WordsListError, KeysValuesTypesError,\
-    OrderValueError
+from controllers.docs import default_error_model
+from controllers.exceptions import BodyKeysError, WordsListError, \
+    KeysValuesTypesError, OrderValueError
 
 api = server.api
 

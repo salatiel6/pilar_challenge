@@ -3,9 +3,9 @@ import pytest
 import sys
 sys.path.insert(1, "../")
 
-from controllers import app
-from controllers.exceptions import BodyKeysError, WordsListError, KeysValuesTypesError,\
-    OrderValueError
+from controllers import app # noqa
+from controllers.exceptions import BodyKeysError, WordsListError, \
+    KeysValuesTypesError, OrderValueError # noqa
 
 
 @pytest.fixture

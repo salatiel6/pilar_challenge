@@ -1,3 +1,6 @@
+> ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.3.0-FEAT-blue)  
+> `Chain of responsability of handlers created`
+
 > ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.2.1-REFACTOR-red)  
 > `Refactored part of project structure (docs, exeptions and validators)`
 
