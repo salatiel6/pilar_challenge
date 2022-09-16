@@ -1,6 +1,7 @@
 from server import server
 from flask_restx import Resource
 from flask import request
+from git import Repo
 from .docs import vowel_count_model, sort_model, default_error_model
 from .handlers import ErrorHandlers, ProcessHandler
 from .validators import ValidateVowelCount, ValidateSort
@@ -51,3 +52,16 @@ class Sort(Resource):
         sort_result = process_handler.process()
 
         return sort_result
+
+
+@app.route("/deploy", methods=["POST"])
+def deploy():
+    if request.method == 'POST':
+        repo = Repo('path/to/git_repo')
+
+        origin = repo.remotes.origin
+        origin.pull()
+
+        return 'Updated PythonAnywhere successfully', 200
+
+    return 'Wrong event type', 400
