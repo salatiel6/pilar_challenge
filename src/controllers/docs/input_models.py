@@ -1,8 +1,8 @@
 from flask_restx import fields
 from server import server
 
-vowel_count_model = server.api.model(
-    "vowel_count_model", {
+vowel_count_input_model = server.api.model(
+    "vowel_count_input_model", {
         "words": fields.List(
             fields.String(),
             required=True,
@@ -11,8 +11,8 @@ vowel_count_model = server.api.model(
     }
 )
 
-sort_model = server.api.model(
-    "sort_model", {
+sort_input_model = server.api.model(
+    "sort_input_model", {
         "words": fields.List(
             fields.String(),
             required=True,
