@@ -1,3 +1,6 @@
+> ![](https://img.shields.io/badge/Set_17,_2022-black) ![](https://img.shields.io/badge/v0.7.3-REFACTOR-red)  
+> `Refactored some pieces of code caught on code review`
+
 > ![](https://img.shields.io/badge/Set_16,_2022-black) ![](https://img.shields.io/badge/v0.7.2-FIX-green)  
 > `Fixed two tests that weren't passing`
 

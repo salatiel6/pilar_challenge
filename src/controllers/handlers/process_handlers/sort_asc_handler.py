@@ -12,8 +12,8 @@ class SortAscHandler(IntefaceHandler):
 
         return False
 
-    def handle(self) -> []:
+    def handle(self) -> {}:
         words = self.request_data["words"]
-        result = sorted(words)
+        result = {"result": sorted(words)}
 
         return result
