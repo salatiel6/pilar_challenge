@@ -56,7 +56,7 @@ class Sort(Resource):
         process_handler = ProcessHandler(request_data, route)
         sort_result = process_handler.process()
 
-        return {"result": sort_result}
+        return sort_result
 
 
 @app.route("/deploy", methods=["POST"])
